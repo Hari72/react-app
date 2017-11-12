@@ -1,0 +1,33 @@
+:local(.pagination) {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+  padding: 2px;
+}
+
+:local(.pagination) li {
+    color: white;
+    float: left;
+    padding: 2px 8px;
+    font-size: 15px;
+    transition: background-color .3s;
+}
+
+:local(.pagination) li.active {
+    color: white;
+    font-size: 20px;
+    transform: translateY(-6px);
+}
+
+:local(.pagination) li:hover:not(.active) {
+	color: black;
+  transform: translateY(-4px);
+  transition: transform .2s;
+}
+
+:local(.pagination) li.disabled {
+    pointer-events:none;
+    opacity:0.2;
+}
